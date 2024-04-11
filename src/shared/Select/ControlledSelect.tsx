@@ -1,9 +1,9 @@
-import { Controller, FieldValues } from 'react-hook-form';
-import Select from '.';
-import { IControlledSelect } from './interface';
+import { Controller, FieldValues } from "react-hook-form";
+import Select from ".";
+import { IControlledSelect } from "./interface";
 
 const ControlledSelect = <TFieldValue extends FieldValues>(
-  props: IControlledSelect<TFieldValue>,
+  props: IControlledSelect<TFieldValue>
 ) => {
   const { control, name: cname, ...rest } = props;
   return (
@@ -15,8 +15,8 @@ const ControlledSelect = <TFieldValue extends FieldValues>(
         <Select
           {...rest}
           {...fields}
-          error={(fieldState.error?.message || '').length > 0}
-          helperText={fieldState.error?.message}
+          error={(fieldState.error?.message || "").length > 0}
+          // helperText={fieldState.error?.message}
         />
       )}
     />
